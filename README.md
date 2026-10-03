@@ -5,13 +5,9 @@
 ## スクリーンショット
 
 ### 資料一覧
-![資料一覧画面](screenshots/list.png)
-
-### 資料登録
-![資料登録画面](screenshots/register.png)
-
-### 資料詳細
-![資料詳細画面](screenshots/detail.png)
+<img src="screenshots/1000013969.jpg" width="250">
+<img src="screenshots/1000013970.jpg" width="250">
+<img src="screenshots/1000013972.jpg" width="250">
 
 ## 開発背景
 
