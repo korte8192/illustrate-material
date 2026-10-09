@@ -143,13 +143,14 @@ class ListActivity : AppCompatActivity() {
             //tag shelf管理
             val tagShelf =dialogView.findViewById<TextView>(R.id.tagShelf)
             val currentTagShelf =dialogView.findViewById<FlexboxLayout>(R.id.currentTagContent)
+            val tagScrollContainer = dialogView.findViewById<View>(R.id.tagScrollContainer)
             val tagInput=dialogView.findViewById<EditText>(R.id.tagInput)
 
             tagShelf.setOnClickListener {
-                if(currentTagShelf.visibility==View.GONE){
-                    currentTagShelf.visibility=View.VISIBLE
+                if(tagScrollContainer.visibility==View.GONE){
+                    tagScrollContainer.visibility=View.VISIBLE
                 }else{
-                    currentTagShelf.visibility=View.GONE
+                    tagScrollContainer.visibility=View.GONE
                 }
             }
 

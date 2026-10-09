@@ -15,6 +15,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import android.content.Intent
 import com.google.android.material.navigation.NavigationView
 import android.net.Uri
+import android.widget.ImageButton
 import java.io.File
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         val app=application as DataApplication
         val dataList =app.datalist
 
+        val settingButton=findViewById<ImageButton>(R.id.setting_button)
+        settingButton.setOnClickListener {
+            val toSetting =Intent(this, SettingActivity::class.java)
+            startActivity(toSetting)
+        }
+
         //datalistのロード
         //ホーム画面のpickup写真
         val pickImage = findViewById<ImageView>(R.id.pickUpImage)
@@ -39,6 +46,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val pickUpImg =dataList.pickUp()
+
+        val index=dataList.searchImgIndex(pickUpImg)
 
         val pickUpImgName =pickUpImg.imgName[0]
         if(pickUpImgName=="sample"){
@@ -53,6 +62,21 @@ class MainActivity : AppCompatActivity() {
 
             if (file.exists()) {
                 pickImage.setImageURI(Uri.fromFile(file))
+            }
+            //ページ移動imgcontent
+            pickImage.setOnClickListener {
+                val intent =
+                    Intent(
+                        this@MainActivity,
+                        imgContentActivity::class.java
+                    )
+
+                intent.putExtra(
+                    "imgIndex",
+                    index
+                )
+
+                startActivity(intent)
             }
         }
 

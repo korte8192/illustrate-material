@@ -71,18 +71,24 @@
             android:layout_height="1dp"
             android:background="#DDDDDD" />
 
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/currentTagContent"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/tagScrollContainer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="180dp"
             android:visibility="gone"
-            app:flexDirection="row"
-            app:flexWrap="wrap"
-            app:justifyContent="flex_start">
+            android:fillViewport="false">
 
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/currentTagContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start">
 
-        </com.google.android.flexbox.FlexboxLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 

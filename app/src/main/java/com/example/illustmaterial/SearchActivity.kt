@@ -26,6 +26,7 @@ import java.io.File
 import android.view.inputmethod.EditorInfo
 import java.util.ArrayList
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
 
 class SearchActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -98,6 +99,15 @@ class SearchActivity : AppCompatActivity() {
                 } else {
                     "「${words}」の検索結果：${searchResult.imgList.size}件"
                 }
+            val imm =
+                getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+
+            imm.hideSoftInputFromWindow(
+                searchBox.windowToken,
+                0
+            )
+
+            searchBox.clearFocus()
 
             showImgList(resultGrid, searchResult)
         }
