@@ -54,6 +54,31 @@
 * JSON
 * Android Internal Storage
 
+  ## 開発環境・動作環境
+
+- 開発環境：Android Studio
+- 使用言語：Java、Kotlin、XML
+- 対応OS：Android
+- データ保存：端末内部ストレージ（JSON形式）
+
+## ビルド・実行方法
+
+1. 本リポジトリをクローンします。
+
+   ```bash
+   git clone https://github.com/korte8192/illustrate-material.git
+   ```
+
+2. Android Studioを起動し、「Open」からクローンしたプロジェクトフォルダを選択します。
+3. Gradleの同期が完了するまで待ちます。
+4. Androidエミュレータ、またはUSBデバッグを有効にしたAndroid端末を接続します。
+5. Android Studioの「Run」からアプリをビルド・実行します。
+
+## 注意事項
+
+- 登録した画像やタグの情報は、端末内に保存されます。
+- 初回起動時は登録データが存在しないため、画像を登録してから一覧・検索機能を利用してください。
+
 ## アプリの構成
 
 データ管理とUI処理を分けて実装しています。
