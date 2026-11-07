@@ -122,7 +122,8 @@ RecyclerViewによるViewの再利用を活用し、表示に必要な要素を�
 - リマインド機能
 - windows,ios対応
 
-
+<br>
+<br>
 
 
 # 要求定義書
