@@ -6,7 +6,7 @@
 
 使用画像は主にニコニ・コモンズ及び自作のイラストを使用しています。
 
-<img src="screenshots/demo.gif" width="400">
+<img src="screenshots/demo.gif" width="250">
 
 ### スクリーンショット
 <img src="screenshots/1000013969.jpg" width="250">
