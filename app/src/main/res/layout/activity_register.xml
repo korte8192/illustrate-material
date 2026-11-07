@@ -41,6 +41,7 @@
                 android:layout_margin="45dp"
                 android:orientation="vertical"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:background="#DDDDDD"
                 android:clickable="true"
                 android:focusable="true">
